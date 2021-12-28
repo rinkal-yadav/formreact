@@ -38,11 +38,11 @@ function Employee() {
              <form action=""  onSubmit={submited} >
                <div>                 
                     <label user="name" className='form-label'>Name : </label>                  
-                    <input  type="text" className='form-input' name="name" id="name" value={userInfo.name} onChange={updateValue} />  <br/><br/>
+                    <input required type="text" className='form-input' name="name" id="name" value={userInfo.name} onChange={updateValue} />  <br/><br/>
                     <label user="name" className='form-label'>Department : </label>                  
-                    <input  type="text" className='form-input' name="department" id="department" value={userInfo.department} onChange={updateValue} />    <br/><br/>
+                    <input required type="text" className='form-input' name="department" id="department" value={userInfo.department} onChange={updateValue} />    <br/><br/>
                     <label user="name" className='form-label'>Rating : </label>                  
-                    <input  type="text" className='form-input' name="rating" id="rating" value={userInfo.rating} onChange={updateValue} />   <br/><br/> 
+                    <input required type="number"  className='form-input' name="rating" min={1} max={10} id="rating" value={userInfo.rating} onChange={updateValue} />   <br/><br/> 
                  </div>
                  <button type="submit" className='form-submit'  >submit</button>
             </form>
